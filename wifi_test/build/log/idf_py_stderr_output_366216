@@ -1,0 +1,28 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x400d8713: task_wdt_timeout_handling at /home/oswald/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8ad8: task_wdt_isr at /home/oswald/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008330d: _xt_lowint1 at /home/oswald/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d57c6: uart_ll_get_txfifo_len at /home/oswald/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:408
+ (inlined by) uart_tx_char at /home/oswald/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x400d5f83: uart_write at /home/oswald/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d6e0d: esp_vfs_write at /home/oswald/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d6871: console_write at /home/oswald/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d6e0d: esp_vfs_write at /home/oswald/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x4013de3d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x401452cf: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x40144cad: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4013debf: printf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d775a: ping at /home/oswald/new_esp/esp-idf-template/main/main.c:107
+0x400d7770: app_main at /home/oswald/new_esp/esp-idf-template/main/main.c:121
+0x40151a7f: main_task at /home/oswald/esp/esp-idf/components/freertos/app_startup.c:208
+0x40089eb9: vPortTaskWrapper at /home/oswald/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m
